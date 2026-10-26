@@ -141,6 +141,7 @@
 //       */
 //     
 //      static int rondaCifras(boolean empiezaUno) {
+//
 //             int objetivo = aleatorio(AZAR, 100, 999);
 //             String auxiliares = generarAuxiliares(AZAR);
 //             double uno, dos;
@@ -378,10 +379,112 @@
 //                         : 0;
 //                 }
 //     
-//         /*
-//          * =====
-//          * JAVI:
-//          * =====
-//          *
-//          */
-//}
+//  /*
+//   * =====
+//   * JAVI:
+//   * =====
+//   *
+//   */
+//
+//        static int leerEntero(String mensaje, int minimo, int maximo) {
+//                    while (true) {
+//                        System.out.print(mensaje);
+//                        String texto = siguienteLinea().trim();
+//    
+//                        try {
+//                            int valor = Integer.parseInt(texto);
+//    
+//                            if (enRango(valor, minimo, maximo)) {
+//                                return valor;
+//                            }
+//                        } catch (NumberFormatException e) {
+//                            // Una entrada incorrecta no termina la partida.
+//                        }
+//    
+//                        System.out.println(
+//                                "Introduce un entero entre "
+//                                + minimo + " y " + maximo + ".");
+//                    }
+//                }
+//    
+//        static double leerDecimal(String mensaje) {
+//                    while (true) {
+//                        System.out.print(mensaje);
+//    
+//                        try {
+//                            double valor = Double.parseDouble(
+//                                    siguienteLinea().trim().replace(',', '.'));
+//    
+//                            if (numeroFinito(valor)) {
+//                                return valor;
+//                            }
+//                        } catch (NumberFormatException e) {
+//                            // Se acepta coma decimal y se rechaza el formato invalido.
+//                        }
+//    
+//                        System.out.println("Introduce un numero finito valido.");
+//                    }
+//                }
+//    
+//        static String siguienteLinea() {
+//                    if (!TECLADO.hasNextLine()) {
+//                        System.out.println(
+//                                "\nEntrada finalizada. Se cierra el programa.");
+//    
+//                        System.exit(0);
+//                    }
+//    
+//                    return TECLADO.nextLine();
+//                }
+//    
+//        static String leerTexto(String mensaje) {
+//                    while (true) {
+//                        System.out.print(mensaje);
+//                        String texto = siguienteLinea().trim();
+//    
+//                        if (!texto.isEmpty()) {
+//                            return texto;
+//                        }
+//    
+//                        System.out.println("No puedes dejar la entrada vacia.");
+//                    }
+//                }
+//    
+//        static boolean leerSiNo(String mensaje) {
+//                    while (true) {
+//                        String respuesta = leerTexto(mensaje);
+//    
+//                        if (respuesta.equalsIgnoreCase("s")) {
+//                            return true;
+//                        }
+//    
+//                        if (respuesta.equalsIgnoreCase("n")) {
+//                            return false;
+//                        }
+//    
+//                        System.out.println("Responde s o n.");
+//                    }
+//                }
+//    
+//        static char leerOperacion() {
+//                    while (true) {
+//                        String texto = leerTexto("Operacion (+, -, *, /): ");
+//    
+//                        if (simboloOperacionValido(texto)) {
+//                            return texto.charAt(0);
+//                        }
+//    
+//                        System.out.println("Operacion desconocida.");
+//                    }
+//                }
+//    
+//        static boolean simboloOperacionValido(String texto) {
+//                    return texto.length() == 1
+//                            && "+-*/".indexOf(texto.charAt(0)) >= 0;
+//                }
+//    
+//        /*
+//         * =====
+//         * JAVI:
+//         * =====
+//         */
