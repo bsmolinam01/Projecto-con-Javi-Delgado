@@ -141,6 +141,7 @@
 //       */
 //     
 //      static int rondaCifras(boolean empiezaUno) {
+<<<<<<< HEAD
 
              int objetivo = aleatorio(AZAR, 100, 999);
              String auxiliares = generarAuxiliares(AZAR);
@@ -227,6 +228,94 @@
                              distancia(uno, objetivo),
                              distancia(dos, objetivo));
                  }
+=======
+//
+//             int objetivo = aleatorio(AZAR, 100, 999);
+//             String auxiliares = generarAuxiliares(AZAR);
+//             double uno, dos;
+//             if (empiezaUno) {
+//                 uno = turnoCifras(nombreUno, objetivo, auxiliares);
+//                 dos = turnoCifras(nombreDos, objetivo, auxiliares);
+//             } else {
+//                 dos = turnoCifras(nombreDos, objetivo, auxiliares);
+//                 uno = turnoCifras(nombreUno, objetivo, auxiliares);
+//             }
+//             System.out.println(
+//                     "Distancias: " + nombreUno + " = " + distancia(uno, objetivo)
+//                     + "; " + nombreDos + " = " + distancia(dos, objetivo));
+//             return ganadorCifras(uno, dos, objetivo);
+//                 }
+//
+//           static double turnoCifras(
+//
+//                          String jugador, int objetivo, String auxiliares) {
+//                      System.out.println(
+//                              "\nTurno de " + jugador + ". Objetivo: " + objetivo);
+//                      mostrarAuxiliares(auxiliares);
+//                      System.out.println(
+//                              "Se permiten repeticiones y resultados decimales.");
+//                      int indice = leerEntero(
+//                              "Primer auxiliar (posicion 1-6): ", 1, 6) - 1;
+//                      double acumulado = valorAuxiliar(auxiliares, indice);
+//                      for (int paso = 1; paso <= 5; paso++) {
+//                          boolean valida = false;
+//                          while (!valida) {
+//                              System.out.println(
+//                                      "Operacion " + paso + "/5. Acumulado: " + acumulado);
+//                              char op = leerOperacion();
+//                              int posicion = leerEntero(
+//                                      "Auxiliar (posicion 1-6): ", 1, 6) - 1;
+//                              double segundo = valorAuxiliar(auxiliares, posicion);
+//                              valida = operacionValida(acumulado, segundo, op);
+//                              if (valida) {
+//                                  acumulado = calcular(acumulado, segundo, op);
+//                                  System.out.println("Resultado: " + acumulado);
+//                              } else {
+//                                  System.out.println(
+//                                          "Operacion no valida. Repite este paso.");
+//                              }
+//                          }
+//                      }
+//                      return acumulado;
+//                  }
+//       
+//           static void mostrarAuxiliares(String auxiliares) {
+//               for (int i = 0; i < auxiliares.length(); i++) {
+//                   System.out.println(
+//                           (i + 1) + ": " + valorAuxiliar(auxiliares, i));
+//               }
+//           }
+//
+//           static String generarAuxiliares(java.util.Random generador) {
+//                    
+//                    // Cada caracter representa un auxiliar.
+//                    // Los caracteres '1' a '9' representan esos numeros.
+//                    // El caracter 'A' representa el numero 10.
+//                    
+//                    String auxiliares = "";
+//                    for (int i = 0; i < 6; i++) {
+//                        int valor = aleatorio(generador, 1, 10);
+//                        auxiliares += valor == 10 ? 'A' : (char) ('0' + valor);
+//                    }
+//                    return auxiliares;
+//                }
+//
+//           static int valorAuxiliar(String auxiliares, int posicion) {
+//
+//                    char simbolo = auxiliares.charAt(posicion);
+//                    return simbolo == 'A' ? 10 : simbolo - '0';
+//                }
+//           static double distancia(double resultado, int objetivo) {
+//
+//                     return Math.abs(resultado - objetivo);
+//                }
+//
+//           static int ganadorCifras(double uno, double dos, int objetivo) {
+//                     return compararMenor(
+//                             distancia(uno, objetivo),
+//                             distancia(dos, objetivo));
+//                 }
+>>>>>>> main
 //
 //  /*
 //   * ======
