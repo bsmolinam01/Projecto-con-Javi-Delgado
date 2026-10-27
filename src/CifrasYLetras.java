@@ -569,9 +569,4 @@
            return Double.isFinite(valor);
        }
 
-       /*
-        * =====
-        * JAVI:
-        * =====
-        */
 }
