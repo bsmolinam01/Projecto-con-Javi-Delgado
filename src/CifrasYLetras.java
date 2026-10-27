@@ -169,14 +169,6 @@
                  "Marcador final: " + nombreUno + " " + puntosUno
                  + " - " + puntosDos + " " + nombreDos);
      }
-
-     /*
-      * =====
-      * JAVI
-      * =====
-      *
-      */
-
      static int rondaCifras(boolean empiezaUno) {
 
              int objetivo = aleatorio(AZAR, 100, 999);
@@ -306,12 +298,6 @@
                return Integer.compare(uno, dos);
            }
 
- /*
-  * ======
-  * JAVI:
-  * ======
-  *
-  */
 
          static int rondaLetras(boolean empiezaUno, int cantidad) {
 
@@ -457,12 +443,6 @@
                          : 0;
                  }
 
- /*
-  * =====
-  * JAVI:
-  * =====
-  *
-  */
 
        static int leerEntero(String mensaje, int minimo, int maximo) {
                    while (true) {
